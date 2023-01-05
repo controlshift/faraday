@@ -13,7 +13,7 @@ module Faraday
       self.load_error = e
     end
 
-    def new(*)
+    ruby2_keywords def new(*)
       unless loaded?
         raise "missing dependency for #{self}: #{load_error.message}"
       end
